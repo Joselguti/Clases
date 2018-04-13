@@ -1,123 +1,151 @@
 package Exercise1;
 
-import java.util.Scanner;
+import java.util.*;
+
+import com.sun.org.apache.xpath.internal.operations.Equals;
 
 
 
 public class consejero {
 	
-  
+
+	public static String llamadas() {
 		
-	public static void main(String [] args) {
-		String tareaporagregar;
-		  boolean terminar = false;
-		  boolean ocupado = false;
+		String Llamadaactual = null;
+		double calculo = Math.random();
 		
-		String[] tareas = new String[10]; 
-		
-	
-		String Si = "Si";
-		String line;
-		String respuestainicial;
-		String respuestapregunta;
-		String respuestallamada1;
-		String respuestallamada2;
-		String respuestallamada3;
-		String respuestallamada4;
-		
-		Scanner in = new Scanner(System.in);
-		
-		while(!terminar) {	
+		if(calculo < 0.5 && calculo >= 0.4) {
 			
-		System.out.print("Seleccione una opcion: \n");
-		System.out.print("(1) Agregar nueva tarea \n");
-		System.out.print("(2) Iniciar Programa");
-		respuestainicial = in.nextLine();	
-		int asd = Integer.parseInt(respuestainicial);
-		
-		if(asd == 1) {
-			System.out.print("Introduzca la tarea por agregar: ");
-			for(int i = 0; i <= tareas.length; i++) {
-			tareaporagregar = in.nextLine();
+			Llamadaactual = "\nLlamada: Llamada de +56988457812, Loco Byron contestar? ";
 			
-			if(tareas[i] == null) {
-			tareas[i] = tareaporagregar;
+		}else if (calculo < 0.6 && calculo >= 0.5){
+			
+			Llamadaactual = "\nLlamada: Llamada de +56956427815, Los bro contestar? ";
+			
+		}else if (calculo < 0.7 && calculo >= 0.6){
+			
+			Llamadaactual = "\nLlamada: Llamada de +56945781269, La Sed contestar? "; 
+		}else if (calculo < 0.8 && calculo >= 0.7){
+			
+			Llamadaactual = "\nLlamada: Llamada de +56965662145, PDI contestar? "; 
 			
 			}
-		}
-		}else if(asd == 2){
 		
+		return Llamadaactual;
+	}
 	
-		if(ocupado == true) {
-			System.out.print("Modo Ocupado, Desea salir? ");
-			 respuestapregunta = in.nextLine();	
-			 
-			 if(respuestapregunta == "Si") {
-				 ocupado = false;
-			 }
-			 
-		}else if (!ocupado) {
-			  System.out.print("Modo desocupado, Alertas incoming ");
-			  
-			while(!ocupado) {	  
-				  
+	
+	public static String noticias() {
+		String Noticiaactual = null;
+		double calculo = Math.random();
+		if(calculo < 0.1 && calculo >= 0) {
+			
+			Noticiaactual = "\nNoticia: Vuelve FF17";
+		
+		}else if (calculo < 0.2 && calculo >= 0.1){
+		
+			Noticiaactual = "\nNoticia: Real Madrid pierde vs Colo Colo";
+		
+		}else if (calculo < 0.3 && calculo >= 0.2){
+			
+			Noticiaactual = "\nNoticia: Juventus no se la pudo";
+			
+		}else if (calculo < 0.4 && calculo >= 0.3){
+			
+			Noticiaactual = "\nNoticia: La nariz de pinocho exploto";
+			
+		}
+		return Noticiaactual; 
+	}
+	  
+			
+	public static void main(String [] args) {
+			String tareaporagregarnombre;
+			String tareaporagregarhora;
+			String tareaporagregarimportancia;
+			boolean terminar = false;
+			boolean ocupado = false;
+			
+			ArrayList<Tareas> tareas = new ArrayList<Tareas>();
+			
+	
+			String si = "Si";
+			String line;
+			String respuestainicial;
+			String respuestapregunta;
+			String respuestallamada1;
+			String respuestallamada2;
+			String respuestallamada3;
+			String respuestallamada4;
+			
+			Scanner in = new Scanner(System.in);	
+					
+			while(!terminar) {	
+				
+				if(ocupado) {
+					System.out.print("Modo Ocupado, Desea salir? ");
+					respuestapregunta = in.nextLine();	
+		
+					if(respuestapregunta.equals(si)) {
+						ocupado = false;
+					} 
+					
+				} else {
+				
+					System.out.print("Seleccione una opcion: \n");
+					System.out.print("(1) Agregar nueva tarea \n");
+					System.out.print("(2) Iniciar Programa \n");
+					System.out.print("(3) Revisar Tareas del dia");
+					System.out.print("(4) Terminar Programa");
+					
+					respuestainicial = in.nextLine();	
+					int asd = Integer.parseInt(respuestainicial);
+					
+					if(asd == 1) {
+						System.out.print("Introduzca el nombre de la tarea: ");
+						
+						//for(int i = 0; i <= tareas.size(); i++) {
+							tareaporagregarnombre = in.nextLine();
+							System.out.print("Introduzca la hora de la tarea: "); 
+							tareaporagregarhora = in.nextLine();
+							int tareaporagregarhoraa = Integer.parseInt(respuestainicial);
+							System.out.print("Introduzca la importancia de la tarea: \n (1 - Alta) \n (2 - Media) \n (3 - Baja)");
+							tareaporagregarimportancia = in.nextLine();
+							int tareaporagregarimportanciaa = Integer.parseInt(respuestainicial);
+							tareas.add(new Tareas(tareaporagregarnombre, tareaporagregarhoraa, tareaporagregarimportanciaa));
+						//}
+						
+					}else if(asd == 2){
+						  System.out.print("Modo desocupado, Alertas incoming ");
+						  
+						while(!ocupado) {	  
+							  System.out.println(ocupado);
+							  
+							System.out.println(llamadas());
+							System.out.println(noticias());
 							
+							System.out.print("\nDesea ir a Modo Ocupado? ");
+							respuestallamada1 = in.nextLine();
+							
+							  if(respuestallamada1.equals(si)) {
+								  ocupado = true;
+							  }	
+										
+										}
+					}else if(asd == 3) {
+						for(int i = 0 ; i == tareas.size(); i++ ) {
+						System.out.println(tareas.get(i));
+						}	
+					}else if(asd == 4) {
+						
+						terminar = true;
+						
+					}
+			     }
+	  }		  
+										}
+						}
 
-							  
-						if(Math.random() < 0.1 && Math.random() >= 0) {
-							System.out.println("\nNoticia: Vuelve FF17");
-						
-						}else if (Math.random() < 0.2 && Math.random() >= 0.1){
-							System.out.print("\nNoticia: Real Madrid pierde vs Colo Colo");
-						
-						}else if (Math.random() < 0.3 && Math.random() >= 0.2){
-							System.out.print("\nNoticia: Juventus no se la pudo");
-							
-						}else if (Math.random() < 0.4 && Math.random() >= 0.3){
-							System.out.print("\nNoticia: La nariz de pinocho exploto");
-							
-						} 	if(Math.random() < 0.5 && Math.random() >= 0.4) {
-							System.out.println("\nLlamada: Llamada de +56988457812, Loco Byron contestar? ");
-							  respuestallamada1 = in.nextLine();	
-							  if(respuestallamada1 == Si) {
-								
-								  ocupado = true;
-							  }
-							  
-						}else if (Math.random() < 0.6 && Math.random() >= 0.5){
-							System.out.println("\nLlamada: Llamada de +56956427815, Los bro contestar? ");
-							  respuestallamada2 = in.nextLine();	
-							  if(respuestallamada2 == Si) {
-								  ocupado = true;
-							  }
-						}else if (Math.random() < 0.7 && Math.random() >= 0.6){
-							System.out.println("\nLlamada: Llamada de +56945781269, La Sed contestar? ");
-							  respuestallamada3 = in.nextLine();	
-							  if(respuestallamada3 == Si) {
-								  ocupado = true;
-							  }
-						}else if (Math.random() < 0.8 && Math.random() >= 0.7){
-							System.out.println("\nLlamada: Llamada de +56965662145, PDI contestar? ");
-							  respuestallamada4 = in.nextLine();	
-							  if(respuestallamada4 == Si) {
-								  ocupado = true;
-								
-							  }
-						} 
-						
-					//	 System.out.print("\nDesea ir a Modo Ocupado? ");
-						//  line = in.nextLine();	
-						  //if(line == Si) {
-							//  ocupado = true;
-							  
-					 // }
-			  }
-		
-		
-	} 
-   }
-  }		  
-}		}
 
 
 

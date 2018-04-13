@@ -1,4 +1,4 @@
-package Exercise1;
+package EjerciciosJava;
 
 public class Prueba { // Exercise 5.6
 

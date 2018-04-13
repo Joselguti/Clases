@@ -1,4 +1,4 @@
-package Exercise1;
+package EjerciciosJava;
 
 public class Exercise65 { //Respuesta abajo !
 	
