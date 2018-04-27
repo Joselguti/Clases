@@ -6,7 +6,7 @@ public class Tareas {
     private int horatarea;
     private int importanciatarea;
     
-    public Tareas(String nombretarea, int horatarea, int tareaporagregarimportanciaa) {
+    public Tareas(String nombretarea, int horatarea, int importanciatarea) {
          this.nombretarea = nombretarea;
          this.horatarea = horatarea;
          this.importanciatarea = importanciatarea;

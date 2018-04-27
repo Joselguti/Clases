@@ -1,4 +1,4 @@
-package EjerciciosJava;
+package Exercise1;
 
 
 

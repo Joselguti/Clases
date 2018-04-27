@@ -141,6 +141,7 @@ public class consejero {
 					}else if(asd == 3) {
 						for(int i = 0 ; i == tareas.size(); i++ ) {
 						System.out.println(tareas.get(i));
+			
 						}	
 					}else if(asd == 4) {
 						
