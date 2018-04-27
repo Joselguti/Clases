@@ -18,6 +18,7 @@ public class Exercise94 {
 	public static int length(String s) { 
 		return s.length(); 
 	}
+	
 	public static String printString(String c) {
 		String r = "";
 		
@@ -25,9 +26,14 @@ public class Exercise94 {
 		
 		return r;
 		
-		
+		// name1.compareTo(name2)
+		// name1.equals(name2);
+		//.indexOf()
+		//.charAt();
+		//.substring();
 		
 	}
+	
 	public static void main(String[] args) {
 		
 	System.out.println(first("Hola"));
