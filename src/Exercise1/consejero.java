@@ -77,6 +77,7 @@ public class consejero {
 			String respuestallamada2;
 			String respuestallamada3;
 			String respuestallamada4;
+			String confirmationresponse;
 			
 			Scanner in = new Scanner(System.in);	
 					
@@ -100,11 +101,11 @@ public class consejero {
 					
 					respuestainicial = in.nextLine();	
 					int asd = Integer.parseInt(respuestainicial);
-					
+					boolean confirmation = false;
 					if(asd == 1) {
 						System.out.print("Introduzca el nombre de la tarea: ");
 						
-						//for(int i = 0; i <= tareas.size(); i++) {
+						while(!confirmation) {
 							tareaporagregarnombre = in.nextLine();
 							System.out.print("Introduzca la hora de la tarea: "); 
 							tareaporagregarhora = in.nextLine();
@@ -113,7 +114,12 @@ public class consejero {
 							tareaporagregarimportancia = in.nextLine();
 							int tareaporagregarimportanciaa = Integer.parseInt(respuestainicial);
 							tareas.add(new Tareas(tareaporagregarnombre, tareaporagregarhoraa, tareaporagregarimportanciaa));
-						//}
+							System.out.print("Desea agregar otra tarea?");
+							confirmationresponse = in.nextLine();
+							if(confirmationresponse.equals("No")) {
+								confirmation = true;
+							}
+						}
 						
 					}else if(asd == 2){
 						  System.out.print("Modo desocupado, Alertas incoming ");
