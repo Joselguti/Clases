@@ -1,8 +1,8 @@
-package Exercise1;
+package asistente;
 
 public class Tareas {
 	
-	private String nombretarea;
+	private String nombretarea; 
     private int horatarea;
     private int importanciatarea;
     
@@ -12,9 +12,10 @@ public class Tareas {
          this.importanciatarea = importanciatarea;
     }
 
-    public String conseguirNombreTarea() {
+    public String conseguirNombreTarea() { 
          return nombretarea;
     }
+    
     public void fijarNombreTarea(String nombretarea) {
 	this.nombretarea = nombretarea;
     }
@@ -30,5 +31,8 @@ public class Tareas {
     public void fijarImportanciaTarea(int importanciatarea) {
  	this.importanciatarea = importanciatarea;
     }	
+    public String getTotalInfo() {
+    return ("Tarea: " + nombretarea + " Hora: " + horatarea + "Importancia: " + importanciatarea);
+    } 
 
 }

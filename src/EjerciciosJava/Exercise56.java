@@ -1,6 +1,6 @@
 package EjerciciosJava;
 
-public class Prueba { // Exercise 5.6
+public class Exercise56 { // Exercise 5.6
 
     public static void baffle(String blimp) {
         System.out.println(blimp); // (paso 4 de ejecuccion)

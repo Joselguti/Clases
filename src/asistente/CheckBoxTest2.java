@@ -1,8 +1,8 @@
-package Exercise1;
+package asistente;
 
 
 
-	
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -35,7 +35,8 @@ public static void main (String[] args){
   
 }
 
-static class Action1 implements ActionListener {        
+static class Action1 implements ActionListener { 
+	
   public void actionPerformed (ActionEvent e) {     
 	  
     JFrame frame2 = new JFrame("Clicked");
@@ -45,7 +46,8 @@ static class Action1 implements ActionListener {
     JLabel label = new JLabel("you clicked me");
     JPanel panel = new JPanel();
     frame2.add(panel);
-    panel.add(label);       
+    panel.add(label);  
+    
   }
 }   
  
