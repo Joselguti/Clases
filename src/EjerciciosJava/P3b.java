@@ -1,6 +1,8 @@
 package EjerciciosJava;
 
 import java.util.Scanner;
+import EjerciciosJava.p2b.Pila;
+import EjerciciosJava.P3a.Bodega;
 
 public class P3b {
 		
@@ -9,10 +11,10 @@ public class P3b {
 	    private int z;
 	    private int idp;
 	    
-	    public P3b(int x, int y, int z, int idp) {
-	         this.x = x;
-	         this.y = y;
-	         this.z = z;
+	    public P3b(int idp) {
+	         this.x = 0;
+	         this.y = 0;
+	         this.z = 0;
 	         this.idp = idp;
 	         
 	    }
@@ -161,7 +163,9 @@ public class P3b {
 		   /** The entry main method (the program starts here) */
 		   
 		public static void main(String[] args) {		   		
-			   		initGame();
+			   P3b hola = new P3b(1);
+			   
+			initGame();
 			   	
 			   	while(isDraw() == false) {
 			   		
@@ -176,7 +180,7 @@ public class P3b {
 						currentPlayer = NOUGHT;
 						
 						playerMove(currentPlayer);
-						 
+				
 					  }else {
 						  printBoard();
 						  currentPlayer = CROSS;
