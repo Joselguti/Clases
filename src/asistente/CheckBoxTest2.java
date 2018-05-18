@@ -1,8 +1,6 @@
 package asistente;
 
 
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -10,7 +8,7 @@ import java.awt.event.*;
 public class CheckBoxTest2 {
 
 public static void main (String[] args){    
-  JFrame frame = new JFrame("Test");
+  JFrame frame = new JFrame("Asistente Personal");
   frame.setVisible(true);
   frame.setSize(1000,1000);
   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

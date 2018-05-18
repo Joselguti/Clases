@@ -76,10 +76,10 @@ public class consejero {
 						}
 						
 					}else if(asd == 2){
-						  System.out.print("Modo desocupado, Alertas incoming ");
+						System.out.print("Modo desocupado, Alertas incoming ");
 						  
 						while(!ocupado) {	  
-							  System.out.println(ocupado);
+							
 							  
 							System.out.println(Llamada.getCall());
 							System.out.println(Noticia.getNews());

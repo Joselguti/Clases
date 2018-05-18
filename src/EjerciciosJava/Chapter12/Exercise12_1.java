@@ -1,4 +1,4 @@
-package EjerciciosJava;
+package EjerciciosJava.Chapter12;
 
 
 /**
@@ -13,7 +13,7 @@ public class Exercise12_1 {
     public static final String[] SUITS = {
         "Clubs", "Diamonds", "Hearts", "Spades"};
 
-    private int rank;
+    private final int rank;
 
     private final int suit;
 
@@ -42,17 +42,10 @@ public class Exercise12_1 {
     			index++; 
     		}
     	}
-    }// Write a method called suitHist that takes an array of cards as a parameter and that returns a 
-    //histogram of the suits in the hand. Your solution should only traverse the array once.
-    
-    public String suitHist(Exercise12_1[] cards ) {
-    	
-    	for(int i = 0; i <= cards.length; i++)
-    	{
-    		System.out.println(cards[i].getSuit());
-    	}
-    	
     }
+    
+
+    
     public int compareTo(Exercise12_1 that) {
     	
         if (this.suit < that.suit) {
@@ -60,12 +53,6 @@ public class Exercise12_1 {
         }
         if (this.suit > that.suit) {
             return 1;
-        }
-        if (this.rank == 1) {
-        	this.rank = 14;
-        }
-        if (that.rank == 1) {
-        	that.rank = 14;
         }
         if (this.rank < that.rank) {
             return -1;
