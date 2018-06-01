@@ -1,5 +1,5 @@
-package EjerciciosJava.Chapter13;
-import java.util.Random;
+package Chapter14;
+
 /**
  * A standard playing card.
  */

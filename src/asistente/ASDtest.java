@@ -16,6 +16,7 @@ public class ASDtest {
 			int tareaporagregarimportanciaa = Integer.parseInt(tareaporagregarimportancia);
 			tareas.add(new Tareas(tareaporagregarnombre, tareaporagregarhoraa, tareaporagregarimportanciaa));
 		}
+		
 		public void busy() {
 			
 			while(stance == true) {	
